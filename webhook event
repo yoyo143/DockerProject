@@ -1,0 +1,6 @@
+- name: Webhook
+  uses: zzzze/webhook-trigger@master
+  with:
+    data: "{\"event_type\":\"build\"}"
+    webhook_url: ${{ secrets.WEBHOOK_URL }}
+    options: "-H \"Accept: application/vnd.github.everest-preview+json\" -H \"Authorization: token ${{ secrets.TOKEN }}\""
